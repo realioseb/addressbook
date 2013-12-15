@@ -39,11 +39,13 @@ div.right_header
     font-size: 24px;
     font-weight: bold;
     background-color: #efeded;
+    margin-bottom: 15px;
 }
 h3
 {
     display: block;
     float: left;
+    margin: 0;
     margin-top: 6px;
 }
 ul.contacts
@@ -84,7 +86,7 @@ input#search_address
 }
 
 /* Gamoyenebulia http://www.cssbuttongenerator.com/ */
-div.add_button
+.add_button
 {
     	position:relative;
 	float: right;
@@ -115,11 +117,44 @@ div.add_button
 	text-align:center;
 	text-shadow:1px 1px 0px #ffffff;
 }
-div.add_button:hover
+.add_button:hover
 {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
         cursor: pointer;
+}
+
+td.field_names
+{
+    color: #3333ff;
+    text-align: right;
+    line-height: 200%;
+    font-size: 18px;
+    padding: 2px;
+    width: 155px;
+    height: 35px;
+    display: block;
+    float: left;
+}
+
+td.input_container
+{
+    padding: 2px;
+    width: 280px;
+    height: 35px;
+    display: block;
+    float: left;
+}
+td.input_container input
+{
+    width: 280px;
+    height: 28px;
+}
+td.input_container button
+{
+    width: 140px;
+    height: 35px;
+    line-height: 33px;
 }

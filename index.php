@@ -31,6 +31,57 @@
                 </div>
                 <div style="clear: both"></div>
             </div>
+            <table>
+                <tr>
+                    <td class="field_names">
+                        First Name:
+                    </td>
+                    <td class="input_container">
+                        <input type="text" name="firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field_names">
+                        Last Name:
+                    </td>
+                    <td class="input_container">
+                        <input type="text" name="lastname">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field_names">
+                        Phone Number:
+                    </td>
+                    <td class="input_container">
+                        <input type="tel" name="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field_names">
+                        Email Address:
+                    </td>
+                    <td class="input_container">
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field_names">
+                        Physical Address:
+                    </td>
+                    <td class="input_container">
+                        <input type="text" name="address">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="field_names">
+                        
+                    </td>
+                    <td class="input_container">
+                        <button name="cancel" class="add_button">Cancel</button>
+                        <button name="save" class="add_button">Save</button>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div style="clear: both;"></div>
     </div>
