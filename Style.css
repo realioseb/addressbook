@@ -1,5 +1,6 @@
 div.container
 {
+    position: relative;
     margin: 0 auto;
     display: block;
     width: 715px;
@@ -8,14 +9,14 @@ div.container
 {
     border: 5px solid silver;
 }
-.header
+.MainStyle
 {
     position:relative;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
     box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dcdfef) );
+    background:-moz-linear-gradient( center top, #ededed 5%, #dcdfef 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
     background-color:#ededed;
     -webkit-border-bottom-right-radius:0px;
@@ -41,8 +42,8 @@ div.container
 }
 .button:hover
 {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dcdfef), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dcdfef 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
         cursor: pointer;
@@ -80,8 +81,10 @@ div#add_button:hover
 }
 div#list
 {
-    position: relative;
+    height: 265px;
+    overflow-y: scroll;
     width: 200px;
+    border-bottom: none;
 }
 div#info
 {
@@ -90,14 +93,18 @@ div#info
 }
 form.search_form
 {
+    border-top: 3px solid silver;
     display: block;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    padding: 3px 4px;
+    width: 192px;
+    background: #dcdfef;
 }
 form.search_form input
 {
-    margin: 5px;
-    width: 91%;
+    text-align: center;
+    border-radius: 15px;
+    width: 95%;
 }
