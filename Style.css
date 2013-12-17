@@ -2,71 +2,91 @@ div.container
 {
     margin: 0 auto;
     display: block;
-    width: 800px;
+    width: 715px;
 }
-div.left_list
+.border
 {
     border: 5px solid silver;
-    border-right: none;
-    width: 215px;
-    height: 450px;
-    float: left;
-    position: relative;
 }
-div.list_header
+.header
 {
-    padding: 8px 0 7px 17px;
-    width: 198px;
+    position:relative;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color:#ededed;
+    -webkit-border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0px;
+    border-bottom-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0px;
+    border-bottom-left-radius:0px;
+    text-indent:0;
+    color: #adadad;
+    font-size: 24px;
+    font-weight: bold;
+    font-family:Arial;
+    font-style:normal;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #ffffff;
+    padding: 10px 10px;
     height: 30px;
-    border-bottom: 5px solid silver;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: #efeded;
-}
-div.right_content
-{
-    border: 5px solid silver;
-    width: 550px;
-    height: 450px;
+    display: block;
+    float: top;
     float: left;
 }
-div.right_header
+.button:hover
 {
-    padding: 0 0 7px 17px;
-    width: 533px;
-    height: 38px;
-    border-bottom: 5px solid silver;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: #efeded;
-    margin-bottom: 15px;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+        cursor: pointer;
+        color: blue;
 }
-h3
+div#left
+{
+    width: 180px;
+}
+div#right
+{
+    width: 420px;
+    border-left: none;
+    border-right: none;
+}
+div#add_button
+{
+    width: 37px;
+    border-left: 3px solid silver;
+    color: #727272;
+    font-size: 16px;
+    line-height: 32px;
+}
+div#add_button:hover
+{
+        color: black;
+}
+.content
 {
     display: block;
     float: left;
-    margin: 0;
-    margin-top: 6px;
+    background: #f2eff2;
+    border-top: none;
+    height: 300px;
 }
-ul.contacts
+div#list
 {
-    list-style: none;
-    padding: 0 0;
-    margin: 0 auto;
+    position: relative;
+    width: 200px;
 }
-ul.contacts li
+div#info
 {
-    line-height: 1.5em;
-    font-size: 18px;
-    padding: 4px 0 4px 12px;
-    list-style: none;
-    border-bottom: 1px solid #e6e6e6;
-}
-ul.contacts li:hover
-{
-    cursor: pointer;
-    background: #f4f4f4;
-    font-weight: 600;
+    border-left: none;
+    width: 500px;
 }
 form.search_form
 {
@@ -76,85 +96,8 @@ form.search_form
     left: 0;
     width: 100%;
 }
-input#search_address
+form.search_form input
 {
-    width: 93%;
-    font-size: 16px;
-    line-height: 1.5em;
-    display: block;
-    margin: 5px auto;
-}
-
-/* Gamoyenebulia http://www.cssbuttongenerator.com/ */
-.add_button
-{
-    	position:relative;
-	float: right;
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-	background-color:#ededed;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	border-bottom-left-radius:0px;
-	text-indent:0;
-	border:1px solid #dcdcdc;
-	color:#777777;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
-	height:43px;
-	line-height:45px;
-	width:65px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #ffffff;
-}
-.add_button:hover
-{
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color:#dfdfdf;
-        cursor: pointer;
-}
-
-td.field_names
-{
-    color: #3333ff;
-    text-align: right;
-    line-height: 200%;
-    font-size: 18px;
-    padding: 2px;
-    width: 155px;
-    height: 35px;
-    display: block;
-    float: left;
-}
-
-td.input_container
-{
-    padding: 2px;
-    width: 280px;
-    height: 35px;
-    display: block;
-    float: left;
-}
-td.input_container input
-{
-    width: 280px;
-    height: 28px;
-}
-td.input_container button
-{
-    width: 140px;
-    height: 35px;
-    line-height: 33px;
+    margin: 5px;
+    width: 91%;
 }
