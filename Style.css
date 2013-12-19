@@ -134,6 +134,7 @@ div.OneFromList
 td.titles
 {
     width: 150px;
+    height: 34px;
     text-align: right;
     font-size: 18px;
     color: blue;

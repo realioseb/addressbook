@@ -3,6 +3,7 @@
   <head>
     <title>Address Book</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -26,41 +27,41 @@
                 $result = findAll();
                 foreach ($result->fetchAll(PDO::FETCH_ASSOC) as $contact)
                 {
-                    echo '<div class="MainStyle buttons OneFromList" id=' . '"id' .
-                          $contact['ID'] . '">' . $contact['FirstName'] . " " . $contact['LastName'] . '</div>';
+                    echo '<div class="MainStyle buttons OneFromList" id=' . '"id' . $contact['ID'] .
+                          '" onclick="ShowInfo()">' . $contact['FirstName'] . " " . $contact['LastName'] . '</div>';
                 }
             ?>
         </div>
         
         <div class="content border" id="info">
             <form action="" method="post" id="mainform">
-                <h4 id="infoheader">Create New Contact:</h4>
+                <h4 id="infoheader"></h4>
                 <table>
                     <tr>
                         <td class="titles">First Name:</td>
-                        <td class="inputs"><input type="text" name="firstname"></td>
+                        <td class="inputs" id="fname"></td>
                     </tr>
                     <tr>
                         <td class="titles">Last Name:</td>
-                        <td class="inputs"><input type="text" name="lastname"></td>
+                        <td class="inputs" id="lname"></td>
                     </tr>
                     <tr>
                         <td class="titles">Phone Number:</td>
-                        <td class="inputs"><input type="tel" name="phone"></td>
+                        <td class="inputs" id="phoneline"></td>
                     </tr>
                     <tr>
                         <td class="titles">Email Address:</td>
-                        <td class="inputs"><input type="email" name="email"></td>
+                        <td class="inputs" id="mailline"></td>
                     </tr>
                     <tr>
                         <td class="titles">Physical Address:</td>
-                        <td class="inputs"><input type="text" name="address"></td>
+                        <td class="inputs" id="addressline"></td>
                     </tr>
                     <tr>
                         <td class="titles"></td>
                         <td class="inputs">
-                            <button type="button" class="buttons MainStyle" id="SC">Save</button>
-                            <button type="button" class="buttons MainStyle" onclick="CancelForm()">Cancel</button>
+                            <button type="button" class="buttons MainStyle" id="butt1" onclick="SaveForm()"></button>
+                            <button type="button" class="buttons MainStyle" id="butt2" onclick="CancelForm()"></button>
                         </td>
                     </tr>
                 </table>
