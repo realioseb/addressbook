@@ -37,39 +37,35 @@ div.container
     padding: 10px 10px;
     height: 30px;
     display: block;
-    float: top;
     float: left;
 }
-.button:hover
+.buttons:hover
 {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dcdfef), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dcdfef 5%, #ededed 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color:#dfdfdf;
-        cursor: pointer;
-        color: blue;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dcdfef), color-stop(1, #ededed) );
+    background:-moz-linear-gradient( center top, #dcdfef 5%, #ededed 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+    background-color:#dfdfdf;
+    color: black;
+    cursor: pointer;
 }
-div#left
+#left
 {
+    display: block;
+    position: relative;
     width: 180px;
 }
-div#right
+#right
 {
     width: 420px;
     border-left: none;
     border-right: none;
 }
-div#add_button
+#add_button
 {
     width: 37px;
     border-left: 3px solid silver;
-    color: #727272;
-    font-size: 16px;
-    line-height: 32px;
-}
-div#add_button:hover
-{
-        color: black;
+    font-size: 39px;
+    line-height: 34px;
 }
 .content
 {
@@ -79,17 +75,29 @@ div#add_button:hover
     border-top: none;
     height: 300px;
 }
-div#list
+
+#list
 {
-    height: 265px;
-    overflow-y: scroll;
+    height: 280px;
     width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-bottom: none;
 }
-div#info
+#info
 {
+    padding-top: 15px;
     border-left: none;
     width: 500px;
+}
+#mainform
+{
+    display: none;
+}
+#infoheader
+{
+    margin: 5px 0 15px 15px;
+    font-size: 20px;
 }
 form.search_form
 {
@@ -107,4 +115,46 @@ form.search_form input
     text-align: center;
     border-radius: 15px;
     width: 95%;
+}
+div.OneFromList
+{
+    width: 90%;
+    border-bottom: 2px solid silver;
+    padding-left: 15px;
+    padding-right: 5px;
+    color: gray;
+    font-size: 16px;
+    height: 25px;
+    line-height: 26px;
+    text-align: left;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+td.titles
+{
+    width: 150px;
+    text-align: right;
+    font-size: 18px;
+    color: blue;
+}
+td.inputs
+{
+    width: 250px;
+    position: relative;
+    display: block;
+}
+td.inputs input
+{
+    padding: 5px 0;
+    width: 100%;
+    border: 2px solid silver;
+}
+td.inputs button
+{
+    color: gray;
+    width: 50%;
+    line-height: 8px;
+    font-size: 13px;
+    float: left;
 }
