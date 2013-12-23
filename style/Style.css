@@ -78,6 +78,7 @@ div.container
 
 #list
 {
+    display: block;
     height: 280px;
     width: 200px;
     overflow-y: auto;
@@ -116,10 +117,9 @@ form.search_form input
     border-radius: 15px;
     width: 95%;
 }
-div.OneFromList
+.OneFromList
 {
     width: 90%;
-    border-bottom: 2px solid silver;
     padding-left: 15px;
     padding-right: 5px;
     color: gray;
@@ -130,6 +130,7 @@ div.OneFromList
     white-space: nowrap;
     overflow:hidden !important;
     text-overflow: ellipsis;
+    border-bottom: 1px solid silver;
 }
 td.titles
 {
@@ -144,6 +145,10 @@ td.inputs
     width: 250px;
     position: relative;
     display: block;
+    padding-left: 7px;
+    font-size: 18px;
+    line-height: 33px; 
+    color: #1e98e9;
 }
 td.inputs input
 {
