@@ -9,7 +9,7 @@ div.container
 {
     border: 5px solid silver;
 }
-.MainStyle
+.main-style
 {
     position:relative;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -85,6 +85,7 @@ div.container
     overflow-x: hidden;
     border-bottom: none;
 }
+
 #info
 {
     padding-top: 15px;
@@ -117,7 +118,7 @@ form.search_form input
     border-radius: 15px;
     width: 95%;
 }
-.OneFromList
+.one-from-list
 {
     width: 90%;
     padding-left: 15px;
@@ -148,7 +149,7 @@ td.inputs
     padding-left: 7px;
     font-size: 18px;
     line-height: 33px; 
-    color: #1e98e9;
+    color: #666666;
 }
 td.inputs input
 {

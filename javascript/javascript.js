@@ -1,7 +1,7 @@
 var contact, id, buttonId1 = '#butt1', buttonId2 = '#butt2';
 
 $(document).ready(function(){
-    
+
 //  axali kontaqtis damatebis forma
     $("#add_button").click(function(){
         $('#mainform').show();
@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
     
 //  contaqtis infos chveneba
-    $(document).on("click", "div.OneFromList", function(){
+    $(document).on("click", "div.one-from-list", function(){
         id = $(this).attr('id');
         $.get("ajax/findContact.php?id=" + id, function(data) {
             contact = $.parseJSON(data);
@@ -74,11 +74,12 @@ $(document).ready(function(){
         }, function(data){
             ret = $.parseJSON(data);
             if(ret>0){
+                $("#list").load(location.href + " #list > *");
                 alert("Contact updated successfully");
+                $("#mainform").hide();
             } else {
                 alert("Something went wrong");
             }
-            $("#list").load(location.href + " #list > *");
         });
     });
     
@@ -99,12 +100,12 @@ $(document).ready(function(){
         }, function(data){
             ret = $.parseJSON(data);
             if(ret>0){
-                $("#mainform").hide();
+                $("#list").load(location.href + " #list > *");
                 alert("Contact create successfully");
+                $("#mainform").hide();
             } else {
                 alert("Something went wrong");
             }
-            $("#list").load(location.href + " #list > *");
         });
     });
     
@@ -115,12 +116,15 @@ $(document).ready(function(){
         }, function(data){
             ret = $.parseJSON(data);
             if(ret>0){
+                $("#list").load(location.href + " #list > *");
                 alert("Contact deleted successfully");
                 $("#mainform").hide();
             } else {
                 alert("Something went wrong");
             }
-            $("#list").load(location.href + " #list > *");
         });
     });
+    
+//  serchi
+    
 });

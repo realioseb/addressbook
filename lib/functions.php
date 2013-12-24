@@ -10,7 +10,8 @@ function findAll()
 {
     $db = dbConnect();
     
-    $result = $db->query("SELECT * FROM contacts");
+    $found = $db->query("SELECT * FROM contacts ORDER BY FirstName, LastName ASC");
+    $result = $found->fetchAll(PDO::FETCH_ASSOC);
     
     return $result;
 }
@@ -31,14 +32,8 @@ function addContact($contact = array())
     $prep = $db->prepare('INSERT INTO contacts (FirstName, LastName, Phone, Email, Address) VALUES (?, ?, ?, ?, ?)');
     $prep->execute(array($contact[0], $contact[1], $contact[2], $contact[3], $contact[4]));
     $rows = $prep->rowCount();
-    
-    if ($rows > 0) {
-        $ret = 1;
-    } else {
-        $ret = 0;
-    }
-    
-    return $ret;
+
+    return !!$rows;
 }
 
 function editContact($contact = array())
@@ -47,14 +42,8 @@ function editContact($contact = array())
     $prep = $db->prepare('UPDATE contacts SET FirstName=?, LastName=?, Phone=?, Email=?, Address=? WHERE `ID`=?');
     $prep->execute(array($contact[1], $contact[2], $contact[3], $contact[4], $contact[5], $contact[0]));
     $rows = $prep->rowCount();
-    
-    if ($rows > 0) {
-        $ret = 1;
-    } else {
-        $ret = 0;
-    }
-    
-    return $ret;
+
+    return !!$rows;
 }
 
 function removeContact($id)
@@ -63,12 +52,6 @@ function removeContact($id)
     $prep = $db->prepare('DELETE FROM contacts WHERE `ID` = ?');
     $prep->execute(array($id));
     $rows = $prep->rowCount();
-    
-    if ($rows > 0) {
-        $ret = 1;
-    } else {
-        $ret = 0;
-    }
-    
-    return $ret;
+
+    return !!$rows;
 }
