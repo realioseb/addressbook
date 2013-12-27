@@ -65,8 +65,8 @@
             </form>
         </div>
         
-        <form class="search_form border">
-            <input type="search_address" id="search_address" placeholder="Type contact name">
+        <form class="border" id="search-form">
+            <input id="search-input" placeholder="Type contact name">
         </form>
         
         <div style="clear: both;"></div>

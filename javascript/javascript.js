@@ -126,5 +126,15 @@ $(document).ready(function(){
     });
     
 //  serchi
-    
+    $(document).on("keyup", "#search-input", function(){
+        $(".one-from-list").each(function(){
+            var txt = $(this).text();
+            var str = $("#search-input").val();
+            if (txt.indexOf(str) === -1) {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+        });
+    });
 });
