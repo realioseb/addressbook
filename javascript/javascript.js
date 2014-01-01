@@ -16,7 +16,33 @@ $(document).ready(function(){
         $(buttonId2).attr('id', 'cancel').html('Cancel');
         buttonId2 = '#cancel';
     });
-    
+
+//  krieiti
+    $(document).on("click", "#create", function(){
+        fn = $('input[name=firstname]').val();
+        ln = $('input[name=lastname]').val();
+        ph = $('input[name=phone]').val();
+        ml = $('input[name=mail]').val();
+        dr = $('input[name=address]').val();
+        
+        $.post("ajax/createContact.php", {
+            fn: fn,
+            ln: ln,
+            ph: ph,
+            ml: ml,
+            dr: dr
+        }, function(data){
+            ret = $.parseJSON(data);
+            if(ret>0){
+                $("#list").load(location.href + " #list > *");
+                alert("Contact create successfully");
+                $("#mainform").hide();
+            } else {
+                alert("Something went wrong");
+            }
+        });
+    });
+
 //  contaqtis infos chveneba
     $(document).on("click", "div.one-from-list", function(){
         id = $(this).attr('id');
@@ -76,32 +102,6 @@ $(document).ready(function(){
             if(ret>0){
                 $("#list").load(location.href + " #list > *");
                 alert("Contact updated successfully");
-                $("#mainform").hide();
-            } else {
-                alert("Something went wrong");
-            }
-        });
-    });
-    
-//  krieiti
-    $(document).on("click", "#create", function(){
-        fn = $('input[name=firstname]').val();
-        ln = $('input[name=lastname]').val();
-        ph = $('input[name=phone]').val();
-        ml = $('input[name=mail]').val();
-        dr = $('input[name=address]').val();
-        
-        $.post("ajax/createContact.php", {
-            fn: fn,
-            ln: ln,
-            ph: ph,
-            ml: ml,
-            dr: dr
-        }, function(data){
-            ret = $.parseJSON(data);
-            if(ret>0){
-                $("#list").load(location.href + " #list > *");
-                alert("Contact create successfully");
                 $("#mainform").hide();
             } else {
                 alert("Something went wrong");
