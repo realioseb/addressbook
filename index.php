@@ -19,7 +19,7 @@
         <div class="main-style border" id="right">
                 Contact Info:
         </div>
-        <div class="main-style border buttons" id="add_button" title="Create new contact" onclick="CreateContact()">
+        <div class="main-style border buttons" id="add_button" title="awesomely designed create button">
                     +
         </div>
         <div style="clear: both;"></div>
